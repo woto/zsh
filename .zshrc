@@ -96,9 +96,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-alias slon_psql='docker exec -it slon-postgres psql -U gdeslon -h localhost'
-alias gdeslon5_shell='docker run --rm --network=gdeslon -it -v $PWD:/app -v $PWD/public:/app/public gdeslon5 bash -l'
-alias gdeslon5_build='docker build . --tag gdeslon5'
-alias gdeslon5_server='docker run --rm --network=gdeslon -it --name=gdeslon5--server -p 3000:3000 -v $PWD:/app -v $PWD/public:/app/public gdeslon5'
-alias gdeslon5_assets='docker run --rm --network=gdeslon -it --name=gdeslon5--assets -p 3035:3035 -v $PWD:/app -v $PWD/public:/app/public -e WEBPACKER_DEV_SERVER_HOST=0.0.0.0 gdeslon5 ./bin/webpack-dev-server'
-
+export PATH="./node_modules/.bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin

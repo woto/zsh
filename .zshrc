@@ -99,3 +99,6 @@ eval "$(rbenv init -)"
 export PATH="./node_modules/.bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
+
+bindkey \^U backward-kill-line
+
